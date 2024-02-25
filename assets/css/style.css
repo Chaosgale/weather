@@ -9,6 +9,9 @@ body {
     
 }
 
+span {
+    font-weight: 300;
+}
 
 header {
     background-image: linear-gradient(
