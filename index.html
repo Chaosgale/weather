@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <aside id="aside">
+            <h2>Search for a City:</h2>
+            <input id="input" type="text" placeholder="Ex: San Diego">
+            <div id="searchBox">
+            <h4 id="searchBtn">Search</h4>
+            </div>
+            <div id="prevSearch">
+                <h4>Atlanta</h4>
+                <h4>Denver</h4>
+                <h4>Seattle</h4>
+                <h4>San Francisco</h4>
+                <h4>Orlando</h4>
+                <h4>New York</h4>
+                <h4>Chicago</h4>
+                <h4>Austin</h4>
+            </div>
+        </aside>
+
+        <div id="weatherBlock">
+            <div id="todayWeather">
+                <h2>Atlanta (9/13/2022) ☀️ 🌤️ 🌥 🌦 ☁️ 🌧 🌩 ❄️ 🌨 🌪</h2>
+                <h5>Temp: 76.62&#176F</h5>
+                <h5>Wind: 8.43 MPH</h5>
+                <h5>Humidity: 44 %</h5>
+            </div>
+
+            <h3> 5-Day Forecast:</h3>
+            <div id="fiveDays">
+                <div class="Block">
+                    <h5 class="date">9/14/2022</h5>
+                    <h2>&nbsp&nbsp☀️</h2>
+                    <h5>Temp: 76.62&#176F</h5>
+                    <h5>Wind: 8.43 MPH</h5>
+                    <h5>Humidity: 44 %</h5>
+                </div>
+                <div class="Block">
+                    <h5 class="date">9/14/2022</h5>
+                    <h2>&nbsp&nbsp🌪</h2>
+                    <h5>Temp: 76.62&#176F</h5>
+                    <h5>Wind: 8.43 MPH</h5>
+                    <h5>Humidity: 44 %</h5>
+                </div>
+                <div class="Block">
+                    <h5 class="date">9/14/2022</h5>
+                    <h2>&nbsp&nbsp🌧</h2>
+                    <h5>Temp: 76.62&#176F</h5>
+                    <h5>Wind: 8.43 MPH</h5>
+                    <h5>Humidity: 44 %</h5>
+                </div>
+                <div class="Block">
+                    <h5 class="date">9/14/2022</h5>
+                    <h2>&nbsp&nbsp🌩</h2>
+                    <h5>Temp: 76.62&#176F</h5>
+                    <h5>Wind: 8.43 MPH</h5>
+                    <h5>Humidity: 44 %</h5>
+                </div>
+                <div id="lastBlock" class="Block">
+                    <h5 class="date">9/14/2022</h5>
+                    <h2>&nbsp&nbsp❄️</h2>
+                    <h5>Temp: 76.62&#176F</h5>
+                    <h5>Wind: 8.43 MPH</h5>
+                    <h5>Humidity: 44 %</h5>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

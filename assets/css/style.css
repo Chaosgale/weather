@@ -1,0 +1,138 @@
+body {
+    margin: 0px;
+}
+
+
+* {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    
+}
+
+
+header {
+    background-image: linear-gradient(
+        to right,
+        rgba(22, 11, 233, 0.6) 0%,
+        rgb(8, 6, 117) 50%
+      );
+    padding: 20px;
+    
+  }
+
+h1 {
+    position: relative;
+    bottom: 4px;
+    left: 50%;
+    font-size: 42px;
+    margin: 0px;
+    color: white;
+}
+
+main {
+
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    padding: 10px;
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 2px solid grey;
+    font-weight: 300;
+    padding:10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 0px 0px 10px 0px;
+    font-size: 38px;
+}
+
+#aside {
+    width: 380px;
+}
+
+#searchBtn {
+    background-color: rgb(123, 123, 234);
+    color: white;   
+}
+
+#searchBox {
+    border-bottom: 2px solid rgb(134, 134, 134);
+}
+
+h4 {
+    margin: 16px 0px;
+    box-sizing: border-box;
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    background-color: rgb(187, 186, 186);
+    font-weight: 300;
+    font-size: 22px;
+    box-shadow: 1px 2px 2px grey;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+
+h4:active {
+    box-shadow: 2px 4px 4px grey
+}
+
+#weatherBlock {
+    margin-top: 20px;
+    margin-left: 12px;
+}
+
+#todayWeather {
+    background-color: rgb(247, 251, 254);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border: 2px solid rgb(134, 134, 134);
+    box-shadow: 1px 1px 1px grey
+}
+
+h5 {
+    margin: 12px 0px;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.Block {
+    color: white;
+    padding: 10px;
+    width: 200px;
+    margin-right: 36px;
+    background-color: rgb(38, 51, 93);
+    box-shadow: 2px 4px 4px grey
+}
+
+#lastBlock {
+    margin-right: 0px;
+}
+
+.date {
+    margin-top:0px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#fiveDays {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    margin: 12px 0px 2px  ;
+    font-size: 28px;
+}
