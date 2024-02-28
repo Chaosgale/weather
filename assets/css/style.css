@@ -116,6 +116,7 @@ h5 {
     padding: 10px;
     width: 200px;
     margin-right: 36px;
+    margin-bottom: 36px;
     background-color: rgb(38, 51, 93);
     box-shadow: 2px 4px 4px grey
 }
@@ -132,7 +133,8 @@ h5 {
 
 #fiveDays {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+   
 }
 
 h3 {
