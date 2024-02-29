@@ -39,6 +39,7 @@ main {
 }
 
 aside {
+    min-width: 170px;
     padding: 10px;
 }
 
