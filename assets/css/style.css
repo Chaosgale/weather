@@ -126,6 +126,15 @@ h5 {
     margin-right: 0px;
 }
 
+#topToday {
+    display: flex;
+}
+
+.icon {
+    height: 62px;
+    width: 62px;
+}
+
 .date {
     margin-top:0px;
     font-size: 28px;

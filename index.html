@@ -34,8 +34,11 @@
 
         <div id="weatherBlock">
             <div id="todayWeather">
-                <h2 id="cityToday">Atlanta (9/13/2022) ☀️ </h2>
-                <h5 id="tempToday">Temp: <span id="tempValue"></span>&#176F</h5>
+                <div id="topToday">
+                    <h2 id="cityToday"><i>city</i> (--/--/----)</h2>
+                    <img class="icon" id="todayIcon" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                </div>
+                <h5 id="tempToday">Temp: <span id="tempValue"></span> &#176F</h5>
                 <h5 id="windToday">Wind: <span id="windValue"></span> MPH</h5>
                 <h5 id="humToday">Humidity: <span id="humidityValue"></span> %</h5>
             </div>
@@ -43,46 +46,46 @@
             <h3> 5-Day Forecast:</h3>
             <div id="fiveDays">
                 <div class="Block">
-                    <h5 class="date">9/14/2022</h5>
-                    <h2>&nbsp&nbsp☀️</h2>
-                    <h5>Temp: 76.62&#176F</h5>
-                    <h5>Wind: 8.43 MPH</h5>
-                    <h5>Humidity: 44 %</h5>
+                    <h5 id="dateOne" class="date">--/--/----</h5>
+                    <img class="icon" id="iconOne" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h5>Temp: <span id="tempOne"></span> &#176F</h5>
+                    <h5>Wind: <span id="windOne"></span> MPH</h5>
+                    <h5>Humidity: <span id="humOne"></span> %</h5>
                 </div>
                 <div class="Block">
-                    <h5 class="date">9/14/2022</h5>
-                    <h2>&nbsp&nbsp🌪</h2>
-                    <h5>Temp: 76.62&#176F</h5>
-                    <h5>Wind: 8.43 MPH</h5>
-                    <h5>Humidity: 44 %</h5>
+                    <h5 id="dateTwo" class="date">--/--/----</h5>
+                    <img class="icon" id="iconTwo" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h5>Temp: <span id="tempTwo"></span> &#176F</h5>
+                    <h5>Wind: <span id="windTwo"></span> MPH</h5>
+                    <h5>Humidity: <span id="humTwo"></span> %</h5>
                 </div>
                 <div class="Block">
-                    <h5 class="date">9/14/2022</h5>
-                    <h2>&nbsp&nbsp🌧</h2>
-                    <h5>Temp: 76.62&#176F</h5>
-                    <h5>Wind: 8.43 MPH</h5>
-                    <h5>Humidity: 44 %</h5>
+                    <h5 id="dateThree" class="date">--/--/----</h5>
+                    <img class="icon" id="iconThree" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h5>Temp: <span id="tempThree"></span> &#176F</h5>
+                    <h5>Wind: <span id="windThree"></span> MPH</h5>
+                    <h5>Humidity: <span id="humThree"></span> %</h5>
                 </div>
                 <div class="Block">
-                    <h5 class="date">9/14/2022</h5>
-                    <h2>&nbsp&nbsp🌩</h2>
-                    <h5>Temp: 76.62&#176F</h5>
-                    <h5>Wind: 8.43 MPH</h5>
-                    <h5>Humidity: 44 %</h5>
+                    <h5 id="dateFour" class="date">--/--/----</h5>
+                    <img class="icon" id="iconFour" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h5>Temp: <span id="tempFour"></span> &#176F</h5>
+                    <h5>Wind: <span id="windFour"></span> MPH</h5>
+                    <h5>Humidity: <span id="humFour"></span> %</h5>
                 </div>
                 <div id="lastBlock" class="Block">
-                    <h5 class="date">9/14/2022</h5>
-                    <h2>&nbsp&nbsp❄️</h2>
-                    <h5>Temp: 76.62&#176F</h5>
-                    <h5>Wind: 8.43 MPH</h5>
-                    <h5>Humidity: 44 %</h5>
+                    <h5 id="dateFive" class="date">--/--/----</h5>
+                    <img class="icon" id="iconFive" src="https://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h5>Temp: <span id="tempFive"></span> &#176F</h5>
+                    <h5>Wind: <span id="windFive"></span> MPH</h5>
+                    <h5>Humidity: <span id="humFive"></span> %</h5>
                 </div>
             </div>
         </div>
 
     </main>
     
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script src="./assets/js/script.js"></script>
 </body>
