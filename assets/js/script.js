@@ -45,7 +45,7 @@
                 selectedHum.push(hum);
             }
         })
-        
+
         console.log(selectedDates);
         document.getElementById('dateOne').textContent = selectedDates[0];
         document.getElementById('dateTwo').textContent = selectedDates[1];
@@ -87,13 +87,14 @@
       });
   }
 
-const searchButton = document.getElementById('searchBtn');
-
-function getApi(cityName) {
+  function getApi(cityName) {
     let requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=e0b3d25983b510fe96dc5aa48fe2fda7`;
   
     fetch(requestUrl)
       .then(function (response) {
+        if (!response.ok) {
+            throw new Error('City not found');
+        }
         return response.json();
       })
       .then(function (data) {
@@ -115,7 +116,6 @@ function getApi(cityName) {
         let month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
         let day = ('0' + currentDate.getDate()).slice(-2);
   
-        // Formatted date string (YYYY-MM-DD)
         let formattedDate = month + '/' + day + '/' + year;
 
         document.getElementById('cityToday').textContent = data.name + ' (' + formattedDate + ')';
@@ -123,12 +123,49 @@ function getApi(cityName) {
         document.getElementById('windValue').textContent = windMPH.toFixed(2);
         document.getElementById('humidityValue').textContent = data.main.humidity;
 
+        // Only save and load search if the city exists
+        saveAndLoadSearch(cityName);
       })
       .catch(function(error) {
         console.log('Error fetching weather data:', error);
+        alert('City not found. Please enter a valid city name.');
       });
   }
-  
+
+  function saveAndLoadSearch(cityName) {
+    saveSearchQuery(cityName);
+    loadPreviousSearches();
+  }
+
+  function saveSearchQuery(cityName) {
+    let searches = JSON.parse(localStorage.getItem('searches')) || [];
+    if (!searches.includes(cityName)) {
+        searches.unshift(cityName);
+        if (searches.length > 6) {
+            searches.pop();
+        }
+        localStorage.setItem('searches', JSON.stringify(searches));
+    }
+  }
+
+  function loadPreviousSearches() {
+    let searches = JSON.parse(localStorage.getItem('searches')) || [];
+    let prevSearchDiv = document.getElementById('prevSearch');
+    prevSearchDiv.innerHTML = '';
+    searches.forEach(cityName => {
+        let button = document.createElement('h4');
+        let capitalizedCityName = cityName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        button.textContent = capitalizedCityName;
+        button.addEventListener('click', function() {
+            getApi(cityName);
+            getApiFive(cityName);
+        });
+        prevSearchDiv.appendChild(button);
+    })
+  }
+
+  const searchButton = document.getElementById('searchBtn');
+
   searchButton.addEventListener('click', () => {
     let cityName = document.getElementById('input').value.trim();
     if(cityName !== '') {
@@ -138,7 +175,6 @@ function getApi(cityName) {
         alert('Please enter a city name')
     }
   });
-
 
 
 
