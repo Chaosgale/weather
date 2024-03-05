@@ -36,7 +36,7 @@
 
             let formattedDate = month + '/' + day + '/' + year;
             
-            if (index === 7 || index === 15 || index === 23 || index === 31 || index === 39) {
+            if (index === 5 || index === 13 || index === 21 || index === 29 || index === 37) {
                 selectedDates.push(formattedDate);
                 selectedIcon.push(iconurl);
                 selectedTemp.push(tempFahrenheit);
