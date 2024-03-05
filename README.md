@@ -30,8 +30,10 @@ Contributions are welcome! If you'd like to contribute to the Weather Dashboard,
 
 ## Screenshot
 
-![Screenshot](<Assets/img/Screenshot .png>)
+![Screenshot](https://raw.githubusercontent.com/Chaosgale/weather/main/assets/img/Screenshot%20.png)
+
 ## URL of the application
+https://chaosgale.github.io/weather/
 
 ## Credits
 
