@@ -164,6 +164,8 @@
     })
   }
 
+  window.addEventListener('load', loadPreviousSearches);
+
   const searchButton = document.getElementById('searchBtn');
 
   searchButton.addEventListener('click', () => {
