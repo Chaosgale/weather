@@ -1,5 +1,4 @@
-// const APIkey = "e0b3d25983b510fe96dc5aa48fe2fda7";
-// 0 8 16 24 32
+
 
 
   function getApiFive(cityName) {
@@ -139,8 +138,9 @@
 
   function saveSearchQuery(cityName) {
     let searches = JSON.parse(localStorage.getItem('searches')) || [];
-    if (!searches.includes(cityName)) {
-        searches.unshift(cityName);
+    let lowerCaseCityName = cityName.toLowerCase();
+    if (!searches.includes(lowerCaseCityName)) {
+        searches.unshift(lowerCaseCityName);
         if (searches.length > 6) {
             searches.pop();
         }
